@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Welcome Screen -->
+    <div id="welcomeScreen" class="welcome-screen">
+        <div class="glow-orb"></div>
+        <div class="welcome-content">
+            <h1 class="welcome-title">
+                <span class="typewriter">Welcome to Tracker</span><span class="cursor">_</span>
+            </h1>
+            <p class="welcome-subtitle">A modern space for your daily goals.</p>
+            <button id="enterAppBtn" class="enter-btn">Initialize <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
+        </div>
+    </div>
+
+    <div class="app-container" id="mainApp" style="display: none; opacity: 0;">
+        <div class="header">
+            <h1>My Tasks</h1>
+            <p class="subtitle">Keep track of your daily goals</p>
+        </div>
+        
+        <div class="input-section">
+            <div class="input-group">
+                <input type="text" id="taskInput" placeholder="What needs to be done?">
+                <textarea id="taskDescInput" class="desc-input" placeholder="Add a description (optional)..." rows="2"></textarea>
+                <input type="datetime-local" id="deadlineInput" class="deadline-input" title="Set a deadline">
+            </div>
+            <button id="addTaskBtn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+            </button>
+        </div>
+
+        <ul id="taskList" class="task-list">
+            <!-- Tasks will be injected here via JavaScript -->
+        </ul>
+        
+        <div class="footer">
+            <span id="taskCount">0 tasks</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
